@@ -1,36 +1,100 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🏠 Airbnb Clone  
 
-## Getting Started
+A full-stack Airbnb clone that allows users to book vacation rentals, list properties, and explore unique stays around the world.  
 
-First, run the development server:
+## 🚀 Features  
 
+### User Features  
+- User authentication (Sign up, Login, Logout)  
+- Search and filter listings by location, price, and amenities  
+- Book and manage reservations  
+- Review and rate properties  
+- Responsive design for mobile and desktop  
+
+### Host Features  
+- List new properties with images, pricing, and availability  
+- Manage property details and booking requests  
+- View and respond to guest reviews  
+
+### Admin Features  
+- Manage users, listings, and reservations  
+- Monitor platform activity and analytics  
+
+## 🛠️ Tech Stack  
+
+### Frontend  
+- **React / Next.js** – For a fast and responsive user interface  
+- **Tailwind CSS** – For modern, responsive styling  
+
+### Backend  
+- **Node.js / Express** – RESTful API for managing data  
+- **MongoDB / PostgreSQL** – Database for storing user, listing, and reservation information  
+
+### Authentication  
+- **JWT (JSON Web Tokens)** – Secure user authentication and session management  
+
+### Deployment  
+- **Docker** – Containerized application for easy deployment  
+- **Vercel / AWS** – Cloud hosting for frontend and backend  
+
+## 📦 Installation  
+
+1. **Clone the repository:**  
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/yourusername/airbnb-clone.git
+cd airbnb-clone
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. **Set up environment variables:**  
+Create a `.env` file in the root directory and add:  
+```bash
+DATABASE_URL=your_database_url
+JWT_SECRET=your_secret_key
+CLOUDINARY_URL=your_cloudinary_url
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. **Install dependencies:**  
+```bash
+# For the backend
+cd server && npm install
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+# For the frontend
+cd client && npm install
+```
 
-## Learn More
+4. **Run the development servers:**  
+```bash
+# Start backend
+cd server && npm run dev
 
-To learn more about Next.js, take a look at the following resources:
+# Start frontend
+cd client && npm run dev
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📊 Database Schema  
+- **User**: id, name, email, password, avatar, isHost  
+- **Listing**: id, title, description, location, price, amenities, hostId  
+- **Reservation**: id, userId, listingId, checkIn, checkOut, totalPrice  
+- **Review**: id, userId, listingId, rating, comment  
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## ✅ Future Improvements  
+- Payment integration (Stripe)  
+- Advanced search with map view  
+- Chat system between hosts and guests  
+- Wishlist feature  
 
-## Deploy on Vercel
+## 🤝 Contributing  
+Contributions are welcome!  
+1. Fork the repository  
+2. Create a new branch (`git checkout -b feature-name`)  
+3. Commit your changes (`git commit -m 'Add new feature'`)  
+4. Push to the branch (`git push origin feature-name`)  
+5. Open a Pull Request  
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 📄 License  
+This project is licensed under the **MIT License**.  
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 📧 Contact  
+For any questions, reach out via:  
+- **Email:** panwarhp2351@gmail.com  
+- **GitHub:** [yashpanwar-hub](https://github.com/yashpanwar-hub)  
